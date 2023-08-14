@@ -199,7 +199,7 @@ function PharmacyMap() {
       <div
         style={{ marginTop: "20px", marginBottom: "10px", fontWeight: "bold" }}
       >
-        <h1>약국지도</h1>
+        <h1>약국지도(위치정보제공 동의를 하셔야 합니다)</h1>
       </div>
       <div id="map" style={{ width: "100%", height: "600px" }}></div>
     </div>
