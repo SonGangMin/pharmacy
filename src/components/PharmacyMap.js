@@ -44,7 +44,7 @@ function PharmacyMap() {
 
             // Axios로 데이터 가져오기
             const apiUrl =
-              "http://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire";
+              "https://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire";
             $.ajax({
               url: apiUrl,
               type: "GET",
@@ -75,7 +75,70 @@ function PharmacyMap() {
                   let dutyTel1 = it.dutyTel1;
                   let dutyTime = "";
 
-                  // ... dutyTime 설정
+                  if (it.dutyTime1s && it.dutyTime1c) {
+                    dutyTime +=
+                      "월요일: " +
+                      it.dutyTime1s +
+                      " ~ " +
+                      it.dutyTime1c +
+                      "<br>";
+                  }
+                  if (it.dutyTime2s && it.dutyTime2c) {
+                    dutyTime +=
+                      "화요일: " +
+                      it.dutyTime2s +
+                      " ~ " +
+                      it.dutyTime2c +
+                      "<br>";
+                  }
+                  if (it.dutyTime3s && it.dutyTime3c) {
+                    dutyTime +=
+                      "수요일: " +
+                      it.dutyTime3s +
+                      " ~ " +
+                      it.dutyTime3c +
+                      "<br>";
+                  }
+                  if (it.dutyTime4s && it.dutyTime4c) {
+                    dutyTime +=
+                      "목요일: " +
+                      it.dutyTime4s +
+                      " ~ " +
+                      it.dutyTime4c +
+                      "<br>";
+                  }
+                  if (it.dutyTime5s && it.dutyTime5c) {
+                    dutyTime +=
+                      "금요일: " +
+                      it.dutyTime5s +
+                      " ~ " +
+                      it.dutyTime5c +
+                      "<br>";
+                  }
+                  if (it.dutyTime6s && it.dutyTime6c) {
+                    dutyTime +=
+                      "토요일: " +
+                      it.dutyTime6s +
+                      " ~ " +
+                      it.dutyTime6c +
+                      "<br>";
+                  }
+                  if (it.dutyTime7s && it.dutyTime7c) {
+                    dutyTime +=
+                      "일요일: " +
+                      it.dutyTime7s +
+                      " ~ " +
+                      it.dutyTime7c +
+                      "<br>";
+                  }
+                  if (it.dutyTime8s && it.dutyTime8c) {
+                    dutyTime +=
+                      "공휴일: " +
+                      it.dutyTime8s +
+                      " ~ " +
+                      it.dutyTime8c +
+                      "<br>";
+                  }
 
                   let pharmacy_location = new window.naver.maps.LatLng(
                     it.wgs84Lat,
